@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Nabla&family=Outfit:wght@100..900&family=Tilt+Neon&display=swap");
+
+:root {
+  --bg-color: rgba(245, 245, 245, 0.439);
+  --text-color: #212020;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --bg-color: #2c3e50;
+  --text-color: #ecf0f1;
+  --box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+  overflow-x: hidden;
+}
+
+.theme-container {
+  position: absolute;
+  display: flex;
+  top: 10px;
+  right: 40px;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.theme-container:hover {
+  transform: scale(1.06);
+}
+
+.theme-container p {
+  padding-right: 5px;
+}
+
+.theme-container i {
+  padding: 5px;
+  font-size: large;
+}
+
+.text-hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.text-shown {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s ease;
+  position: relative;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  position: relative;
+}
+
+.main-header h1 {
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 9em;
+  animation: onstart 1.5s ease;
+}
+
+@keyframes onstart {
+  0% {
+    letter-spacing: 50px;
+    filter: blur(20px);
+  }
+
+  100% {
+    letter-spacing: 0px;
+    filter: blur(0px);
+  }
+}
+
+.brands i {
+  font-size: 4em;
+  animation: onstart 1.5s ease;
+  cursor: pointer;
+  margin: 6px;
+  transition: transform 0.5s ease;
+}
+
+.brands i:hover {
+  transform: scale(1.1);
+}
+
+
+
+.fa-angle-down {
+  position: absolute;
+  animation: hover 3s infinite;
+  font-size: x-large;
+}
+
+@keyframes hover {
+  0% {
+    bottom: 0;
+  }
+
+  50% {
+    bottom: -70px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+
+.about-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.about-section img {
+  height: 40rem;
+  margin: 10rem;
+  margin-top: 0;
+  border: 10px solid var(--text-color);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.gallery-section{
+  height: 40vh;
+  text-align: center;
+}
+
+.gallery-section .gallery-img-container{
+  display: flex;
+  height: 15rem;
+}
+
+.gallery-section .gallery-img-container img{
+  border: 5px solid var(--text-color);
+  margin: 10px;
+  padding: 5px;
+}
+
+
+.blog-post-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 30rem;
+}
+
+.blog-item{
+  line-height: 25px;
+}
+
+.contact-section {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-section a{
+  font-size: 3rem;
+  color: var(--text-color);
+  text-decoration: none;
+  border: 1px solid var(--text-color);
+  padding: 10px 50px;
+  border-radius: 50px;
+  transition: all 0.5s ease;
+}
+
+.contact-section a:hover{
+  transform: scale(1.05);
+  box-shadow:
+  2.8px 2.8px 2.2px rgba(255, 255, 255, 0.037),
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.053),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.065),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.077),
+  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.093),
+  100px 100px 80px rgba(0, 0, 0, 0.13);
+}
+
+.footer-section {
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  height: 300px;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  background-image: url(layered-peaks.svg), url(layered-peaks_2.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.footer-container {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+footer .fa-copyright {
+  margin: 3px;
+  margin-top: 2px;
+}
