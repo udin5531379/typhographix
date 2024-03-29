@@ -6,20 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typographix</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scrollbar.css">
+    <link rel="stylesheet" href="navbar.css">
+
     <script src="https://kit.fontawesome.com/5f86fca6f7.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="main-container" id="main-container-id">
 
-        <section>
+        <section class="nav-bar-container">
+
+            <div class="hamburger-icon-container" id="hamburger-icon-container-id">
+                <div class="line-0"></div>
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+            </div>
+
+            <nav id="navId">
+                <ul>
+                    <li><a href="#section-1" onclick="hideMenu()">Home</a></li>
+                    <li><a href="#section-2" onclick="hideMenu()">About</a></li>
+                    <li><a href="#section-3" onclick="hideMenu()">Gallery</a></li>
+                    <li><a href="#section-4" onclick="hideMenu()">Blog</a></li>
+                    <li><a href="#section-5" onclick="hideMenu()">Contact</a></li>
+                </ul>
+            </nav>
+
+
             <div class="theme-container" id="theme-container-id">
                 <i class="fa-solid fa-sun"></i>
                 <p class="theme-name-class text-shown text-hidden" id="theme-name-id">Light</p>
             </div>
+
         </section>
 
-        <section class="main-header">
+        <section class="main-header" id="section-1">
             <h1>Rajkarnikar</h1>
             <div class="brands">
                 <i class="fa-brands fa-facebook"></i>
@@ -31,13 +53,13 @@
             <i class="fa-solid fa-angle-down"></i>
         </section>
 
-        <section class="about-section">
+        <section class="about-section" id="section-2">
             <h2>Cutting Edge Image & Text Generation</h2>
             <img src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="">
         </section>
 
-        <section class="gallery-section">
+        <section class="gallery-section" id="section-3">
             <h2>Gallery(Coming Soon)</h2>
             <div class="gallery-img-container">
                 <img src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -49,44 +71,50 @@
             </div>
         </section>
 
-        <section class="blog-post-section">
+        <section class="blog-post-section" id="section-4">
             <h2>Blog Post(Coming Soon)</h2>
             <div class="blog-posts-container">
                 <article class="blog-item">
                     <h3>Blog Post Item 1 Here</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ratione ipsum nemo incidunt
-                        doloribus. Eum impedit tempora, in ipsam voluptatibus modi deleniti? Eum perferendis officia et, ex
+                        doloribus. Eum impedit tempora, in ipsam voluptatibus modi deleniti? Eum perferendis officia et,
+                        ex
                         est ad a. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ratione ipsum nemo
                         incidunt
-                        doloribus. Eum impedit tempora, in ipsam voluptatibus modi deleniti? Eum perferendis officia et, ex
+                        doloribus. Eum impedit tempora, in ipsam voluptatibus modi deleniti? Eum perferendis officia et,
+                        ex
                         est ad a.</p>
                 </article>
 
                 <article class="blog-item">
                     <h3>Blog Post Item 1 Here</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ratione ipsum nemo incidunt
-                        doloribus. Eum impedit tempora, in ipsam voluptatibus modi deleniti? Eum perferendis officia et, ex
+                        doloribus. Eum impedit tempora, in ipsam voluptatibus modi deleniti? Eum perferendis officia et,
+                        ex
                         est ad a. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ratione ipsum nemo
                         incidunt
-                        doloribus. Eum impedit tempora, in ipsam voluptatibus modi deleniti? Eum perferendis officia et, ex
+                        doloribus. Eum impedit tempora, in ipsam voluptatibus modi deleniti? Eum perferendis officia et,
+                        ex
                         est ad a.</p>
                 </article>
 
                 <article class="blog-item">
                     <h3>Blog Post Item 1 Here</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ratione ipsum nemo incidunt
-                        doloribus. Eum impedit tempora, in ipsam voluptatibus modi deleniti? Eum perferendis officia et, ex
+                        doloribus. Eum impedit tempora, in ipsam voluptatibus modi deleniti? Eum perferendis officia et,
+                        ex
                         est ad a. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ratione ipsum nemo
                         incidunt
-                        doloribus. Eum impedit tempora, in ipsam voluptatibus modi deleniti? Eum perferendis officia et, ex
+                        doloribus. Eum impedit tempora, in ipsam voluptatibus modi deleniti? Eum perferendis officia et,
+                        ex
                         est ad a.</p>
                 </article>
-                
+
 
             </div>
         </section>
 
-        <section class="contact-section">
+        <section class="contact-section" id="section-5">
             <a href="mailto: udinrajkarnikar@yahoo.com">Contact Me</a>
         </section>
 
@@ -100,6 +128,7 @@
         </div>
     </section>
     <script src="script.js"></script>
+    <script src="navbar.js"></script>
 </body>
 
 
