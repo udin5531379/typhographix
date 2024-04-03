@@ -98,7 +98,7 @@ ul li a {
   transition: all 0.2s ease-in-out;
 }
 
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1320px) {
   nav.active {
     top: 50%;
     left: 50%;
@@ -120,3 +120,11 @@ ul li a {
     padding: 0;
   }
 }
+
+@media screen and (min-width: 360px) and (max-width: 550px) {
+  nav.active{
+    padding: 2rem 5rem;
+  }
+}
+
+
